@@ -37,7 +37,7 @@ source /etc/os-release
 
 serverAddress=$(hostname -I | cut -d' ' -f1)
 
-glpiVersion="GLPI 9.3.2"
+glpiVersion="GLPI 9.4.0"
 zabbixVersion="Zabbix 4.0.1"
 
 verdanatechGIT="https://github.com/verdanatech/igz"
@@ -59,7 +59,7 @@ GLPI_PLUGINS_DIR=$GLPI_DIR/plugins
 zabbixDownloadLink="https://ufpr.dl.sourceforge.net/project/zabbix/ZABBIX%20Latest%20Stable/4.0.1/zabbix-4.0.1.tar.gz"
 
 # GLPi link
-glpiDownloadLink="https://github.com/glpi-project/glpi/releases/download/9.3.2/glpi-9.3.2.tgz"
+glpiDownloadLink="https://github.com/glpi-project/glpi/releases/download/9.4.0/glpi-9.4.0.tgz"
 
 # Function erroDetect
 
