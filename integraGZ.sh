@@ -37,7 +37,7 @@ source /etc/os-release
 
 serverAddress=$(hostname -I | cut -d' ' -f1)
 
-glpiVersion="GLPI 9.4.0"
+glpiVersion="GLPI 9.4.4"
 zabbixVersion="Zabbix 4.0.1"
 
 verdanatechGIT="https://github.com/verdanatech/igz"
@@ -59,7 +59,7 @@ GLPI_PLUGINS_DIR=$GLPI_DIR/plugins
 zabbixDownloadLink="https://ufpr.dl.sourceforge.net/project/zabbix/ZABBIX%20Latest%20Stable/4.0.1/zabbix-4.0.1.tar.gz"
 
 # GLPi link
-glpiDownloadLink="https://github.com/glpi-project/glpi/releases/download/9.4.0/glpi-9.4.0.tgz"
+glpiDownloadLink="https://github.com/glpi-project/glpi/releases/download/9.4.4/glpi-9.4.4.tgz"
 
 # Function erroDetect
 
@@ -1327,47 +1327,47 @@ sleep 3
 	# Plugin OS
 
 	# Plugin Dashboard
-	glpiPluginDashboard="https://forge.glpi-project.org/attachments/download/2257/GLPI-dashboard_plugin-0.9.4.zip"
+	glpiPluginDashboard="https://forge.glpi-project.org/attachments/download/2257/GLPI-dashboard_plugin-0.9.8.zip"
 	wget -qO- $glpiPluginDashboard | bsdtar -xvf-;
 	mv dashboard  $GLPI_PLUGINS_DIR; [ $? -ne 0 ] && erroDetect
 
 	# Plugin Mydashboard
-	glpiPluginMydashboard="https://github.com/InfotelGLPI/mydashboard/releases/download/1.6.2/glpi-mydashboard.1.6.2.tar.gz"
+	glpiPluginMydashboard="https://github.com/InfotelGLPI/mydashboard/releases/download/1.7.6/glpi-mydashboard-1.7.6.tar.gz"
 	wget -qO- $glpiPluginMydashboard | tar -zxv;
 	mv mydashboard $GLPI_PLUGINS_DIR; [ $? -ne 0 ] && erroDetect
 
 	# Apps structure inventory
-	glpiPluginAppStructureInventory="https://github.com/ericferon/glpi-archisw/archive/v2.0.12.zip"
+	glpiPluginAppStructureInventory="https://github.com/ericferon/glpi-archisw/archive/v2.1.4.zip"
 	wget -qO- $glpiPluginAppStructureInventory | bsdtar -xvf-;
 	mv glpi-archisw-2.0.12 $GLPI_PLUGINS_DIR/archisw; [ $? -ne 0 ] && erroDetect
 
 	# Plugin Form Creator
-	glpiPluginFormcreator="https://github.com/pluginsGLPI/formcreator/releases/download/v2.6.5/glpi-formcreator-2.6.5.tar.bz2"
+	glpiPluginFormcreator="https://github.com/pluginsGLPI/formcreator/releases/download/v2.8.6/glpi-formcreator-2.8.6.tar.bz2"
 	wget -qO- $glpiPluginFormcreator | tar -jxv; 
 	mv formcreator $GLPI_PLUGINS_DIR;
 
 	# Plugin Fusion
-	glpiPluginFusionInventory="https://github.com/fusioninventory/fusioninventory-for-glpi/releases/download/glpi9.3%2B1.2/fusioninventory-9.3+1.2.tar.gz"
+	glpiPluginFusionInventory="https://github.com/fusioninventory/fusioninventory-for-glpi/releases/download/glpi9.4%2B2.2/fusioninventory-9.4+2.2.tar.bz2"
 	wget -qO- $glpiPluginFusionInventory | tar -zxv;
 	mv fusioninventory $GLPI_PLUGINS_DIR; [ $? -ne 0 ] && erroDetect
 
 	# Plugin Behavior
-	glpiPluginBehaviors="https://forge.glpi-project.org/attachments/download/2251/glpi-behaviors-2.1.1.tar.gz"
+	glpiPluginBehaviors="https://forge.glpi-project.org/attachments/download/2296/glpi-behaviors-2.2.2.tar.gz"
 	wget -qO- $glpiPluginBehaviors | tar -zxv;
 	mv behaviors $GLPI_PLUGINS_DIR; [ $? -ne 0 ] && erroDetect
 
 	# Plugin Database Inventory
-	glpiPluginDatabasesinventory="https://github.com/InfotelGLPI/databases/releases/download/2.1.1/glpi-databases-2.1.1.tar.gz"
+	glpiPluginDatabasesinventory="https://github.com/InfotelGLPI/databases/releases/download/2.2.1/glpi-databases-2.2.1.tar.gz"
 	wget -qO- $glpiPluginDatabasesinventory | tar -zxv;
 	mv databases $GLPI_PLUGINS_DIR; [ $? -ne 0 ] && erroDetect
 
 	# Plugin Appliances Inventory
-	glpiPluginAppliancesinventory="https://forge.glpi-project.org/attachments/download/2259/glpi-appliances-2.4.1.tar.gz"
+	glpiPluginAppliancesinventory="https://forge.glpi-project.org/attachments/download/2285/glpi-appliances-2.5.0.tar.gz"
 	wget -qO- $glpiPluginAppliancesinventory | tar -zxv;
 	mv appliances $GLPI_PLUGINS_DIR; [ $? -ne 0 ] && erroDetect
 
 	# Plugin Webapplications Inventory
-	glpiPluginWebapplicationsinventory="https://github.com/InfotelGLPI/webapplications/releases/download/2.5.1/glpi-webapplications-2.5.1.tar.gz"
+	glpiPluginWebapplicationsinventory="https://github.com/InfotelGLPI/webapplications/releases/download/2.6.0/glpi-webapplications-2.6.0.tar.gz"
 	wget -qO- $glpiPluginWebapplicationsinventory | tar -zxv;
 	mv webapplications $GLPI_PLUGINS_DIR; [ $? -ne 0 ] && erroDetect
 
