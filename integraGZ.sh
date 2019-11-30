@@ -1326,6 +1326,11 @@ sleep 3
 
 	# Plugin OS
 
+	# Plugin Modifications
+	glpiPluginDashboard="https://ufpr.dl.sourceforge.net/project/glpithemes/9.4.4/Plugin_Modifications_1.5.1_GLPI_9.4.4.zip"
+	wget -qO- $glpiPluginDashboard | bsdtar -xvf-;
+	mv mod  $GLPI_PLUGINS_DIR; [ $? -ne 0 ] && erroDetect
+	
 	# Plugin Dashboard
 	glpiPluginDashboard="https://forge.glpi-project.org/attachments/download/2257/GLPI-dashboard_plugin-0.9.8.zip"
 	wget -qO- $glpiPluginDashboard | bsdtar -xvf-;
