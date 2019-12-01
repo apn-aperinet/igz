@@ -1325,6 +1325,28 @@ sleep 3
 	## GLPi Plugins Links
 
 	# Plugin OS
+	
+	#accounts
+	glpiPluginDashboard="https://github.com/InfotelGLPI/accounts/releases/download/2.5.0/glpi-accounts.2.5.0.tar.gz"
+	wget -qO- $glpiPluginMydashboard | tar -zxv;
+	mv accounts $GLPI_PLUGINS_DIR; [ $? -ne 0 ] && erroDetect
+	
+	#PDF
+	glpiPluginDashboard="https://forge.glpi-project.org/attachments/download/2293/glpi-pdf-1.6.0.tar.gz"
+	wget -qO- $glpiPluginMydashboard | tar -zxv;
+	mv pdf $GLPI_PLUGINS_DIR; [ $? -ne 0 ] && erroDetect
+	
+	#Fields
+	glpiPluginDashboard="https://github.com/pluginsGLPI/fields/releases/download/1.10.2/glpi-fields-1.10.2.tar.bz2"
+	wget -qO- $glpiPluginFormcreator | tar -jxv; 
+	mv fields $GLPI_PLUGINS_DIR;
+	
+	
+	#Data Injection
+	glpiPluginDashboard="https://github.com/pluginsGLPI/datainjection/releases/download/2.7.0/glpi-datainjection-2.7.0.tar.bz2"
+	wget -qO- $glpiPluginFormcreator | tar -jxv; 
+	mv datainjection $GLPI_PLUGINS_DIR;
+	
 
 	# Plugin Modifications
 	glpiPluginDashboard="https://ufpr.dl.sourceforge.net/project/glpithemes/9.4.4/Plugin_Modifications_1.5.1_GLPI_9.4.4.zip"
